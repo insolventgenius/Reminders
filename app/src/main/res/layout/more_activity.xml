@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/thursdayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Th"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/wednesdayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <CheckBox
+        android:id="@+id/fridayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="F"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/thursdayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <CheckBox
+        android:id="@+id/sundayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderView" />
+
+    <CheckBox
+        android:id="@+id/tuesdayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Tu"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/mondayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <CheckBox
+        android:id="@+id/wednesdayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="W"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/tuesdayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox" />
+
+    <CheckBox
+        android:id="@+id/saturdayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Sat"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/fridayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox" />
+
+    <CheckBox
+        android:id="@+id/mondayBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="M"
+        app:layout_constraintBottom_toBottomOf="@+id/sundayBox"
+        app:layout_constraintStart_toEndOf="@+id/sundayBox"
+        app:layout_constraintTop_toTopOf="@+id/sundayBox" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Notes: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sundayBox" />
+
+    <EditText
+        android:id="@+id/editNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text='eg. "grey building, 3rd floor"'
+        app:layout_constraintBottom_toBottomOf="@+id/notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/notes"
+        app:layout_constraintTop_toTopOf="@+id/notes" />
+
+    <Switch
+        android:id="@+id/notificationSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Notification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNotes" />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Set Date"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/notificationSwitch"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <Switch
+        android:id="@+id/repeatSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Repeats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationSwitch" />
+
+    <Button
+        android:id="@+id/behaviorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Behavior"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/repeatSwitch"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/reminderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text='"reminder text"'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoView">
+
+
+    </TimePicker>
+
+    <TextView
+        android:id="@+id/infoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/timePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/behaviorButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
